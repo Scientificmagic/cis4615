@@ -1,1 +1,1 @@
-String username = System.getenv("USER");
+String username = System.getProperty("user.name");

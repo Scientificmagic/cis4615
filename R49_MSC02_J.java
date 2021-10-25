@@ -1,10 +1,11 @@
-import java.util.Random;
+import java.security.SecureRandom;
+import java.security.NoSuchAlgorithmException;
 // ...
 
-Random number = new Random(123L);
-//...
-for (int i = 0; i < 20; i++) {
-	// Generate another random integer in the range [0, 20]
-	int n = number.nextInt(21);
-	System.out.println(n);
+public static void main (String args[]) {
+	SecureRandom number = new SecureRandom();
+	// Generate 20 integers 0..20
+	for (int i = 0; i < 20; i++) {
+		System.out.println(number.nextInt(21));
+	}
 }
